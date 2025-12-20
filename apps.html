@@ -12,23 +12,64 @@
     background: #ffffff;
     color: #111;
   }
-  h1 { margin-top: 0; font-size: 28px; }
-  h2 { margin-top: 32px; font-size: 26px; }
-  .app { margin: 16px 0 28px; }
-  .app-title { font-size: 18px; font-weight: bold; margin-bottom: 6px; }
-  .store-links a {
-    display: inline-block;
-    margin-right: 18px;
-    margin-top: 6px;
-    color: #0b57d0;
-    font-weight: bold;
-    text-decoration: underline;
+  h1 {
+    margin-top: 0;
+    font-size: 28px;
   }
-  .credentials { margin-top: 10px; font-size: 15px; }
-  .credentials strong { font-weight: bold; }
-  hr { margin: 30px 0; border: none; border-top: 2px solid #e0e0e0; }
-  .note { margin-top: 16px; font-size: 15px; color: #333; }
-  .back { margin-top: 30px; }
+  h2 {
+    margin-top: 34px;
+    font-size: 26px;
+  }
+  .app {
+    margin: 18px 0 34px;
+  }
+  .app-title {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  .buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .store-button {
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+  .apple {
+    background: #000000;
+  }
+  .google {
+    background: #1a73e8;
+  }
+  .credentials {
+    margin-top: 12px;
+    font-size: 15px;
+  }
+  .credentials strong {
+    font-weight: bold;
+  }
+  hr {
+    margin: 36px 0;
+    border: none;
+    border-top: 2px solid #e0e0e0;
+  }
+  .note {
+    margin-top: 18px;
+    font-size: 15px;
+    color: #333;
+  }
+  .back {
+    margin-top: 34px;
+  }
 </style>
 </head>
 <body>
@@ -39,9 +80,13 @@
 
 <div class="app">
   <div class="app-title">Humanity – Scheduling</div>
-  <div class="store-links">
-    <a href="https://apps.apple.com/us/app/tcp-humanity/id1199006408" target="_blank" rel="noopener">Apple Store</a>
-    <a href="https://play.google.com/store/apps/details?id=com.humanity.apps.humanityV3" target="_blank" rel="noopener">Google Playstore</a>
+  <div class="buttons">
+    <a class="store-button apple" href="https://apps.apple.com/us/app/tcp-humanity/id1199006408" target="_blank" rel="noopener">
+      Apple Store
+    </a>
+    <a class="store-button google" href="https://play.google.com/store/apps/details?id=com.humanity.apps.humanityV3" target="_blank" rel="noopener">
+      Google Play
+    </a>
   </div>
   <div class="credentials">
     <strong>Username:</strong> your payroll number<br>
@@ -51,9 +96,13 @@
 
 <div class="app">
   <div class="app-title">RT Copper Training App</div>
-  <div class="store-links">
-    <a href="https://apps.apple.com/us/app/rt-copper-training/id6447054837" target="_blank" rel="noopener">Apple Store</a>
-    <a href="https://play.google.com/store/apps/details?id=com.rtcoppert.app" target="_blank" rel="noopener">Google Playstore</a>
+  <div class="buttons">
+    <a class="store-button apple" href="https://apps.apple.com/us/app/rt-copper-training/id6447054837" target="_blank" rel="noopener">
+      Apple Store
+    </a>
+    <a class="store-button google" href="https://play.google.com/store/apps/details?id=com.rtcoppert.app" target="_blank" rel="noopener">
+      Google Play
+    </a>
   </div>
   <div class="credentials">
     <strong>Username:</strong> your payroll number<br>
@@ -67,17 +116,25 @@
 
 <div class="app">
   <div class="app-title">EquatePlus – MyShare</div>
-  <div class="store-links">
-    <a href="https://apps.apple.com/app/id951722877" target="_blank" rel="noopener">Apple Store</a>
-    <a href="https://play.google.com/store/apps/details?id=com.equatex.mobile" target="_blank" rel="noopener">Google Playstore</a>
+  <div class="buttons">
+    <a class="store-button apple" href="https://apps.apple.com/app/id951722877" target="_blank" rel="noopener">
+      Apple Store
+    </a>
+    <a class="store-button google" href="https://play.google.com/store/apps/details?id=com.equatex.mobile" target="_blank" rel="noopener">
+      Google Play
+    </a>
   </div>
 </div>
 
 <div class="app">
   <div class="app-title">Empower – 401K</div>
-  <div class="store-links">
-    <a href="https://apps.apple.com/us/app/empower/id1001257338" target="_blank" rel="noopener">Apple Store</a>
-    <a href="https://play.google.com/store/apps/details?id=com.participantmobileapp" target="_blank" rel="noopener">Google Playstore</a>
+  <div class="buttons">
+    <a class="store-button apple" href="https://apps.apple.com/us/app/empower/id1001257338" target="_blank" rel="noopener">
+      Apple Store
+    </a>
+    <a class="store-button google" href="https://play.google.com/store/apps/details?id=com.participantmobileapp" target="_blank" rel="noopener">
+      Google Play
+    </a>
   </div>
 </div>
 
