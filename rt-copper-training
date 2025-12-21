@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RT Copper Training</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<h2>Login Information</h2>
+
+<p>
+  <strong>Username</strong><br>
+  Your payroll number <strong>with leading zeroes to make 8 digits</strong>.<br><br>
+  <em>Examples:</em><br>
+  Payroll 1234567 → 01234567<br>
+  Payroll 54321 → 054321
+</p>
+
+<p>
+  <strong>Password</strong><br>
+  1234
+</p>
+
+<hr>
+
+<h2>Download the App</h2>
+
+<p>
+  <a href="https://apps.apple.com/us/app/rt-copper-training/id6447054837">
+    🍎 Apple App Store
+  </a>
+</p>
+
+<p>
+  <a href="https://play.google.com/store/apps/details?id=com.rtcoppert.app">
+    🤖 Google Play Store
+  </a>
+</p>
+
+</body>
+</html>
