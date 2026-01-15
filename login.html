@@ -1,5 +1,50 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Desktop Styles (Default) */
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    
+    input {
+      padding: 8px;
+      width: 250px;
+    }
+
+    button {
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    /* Mobile Styles (Makes things bigger on phones) */
+    @media screen and (max-width: 600px) {
+      h2 {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      input {
+        font-size: 18px !important; /* Prevents auto-zoom on iPhone */
+        padding: 15px !important;
+        width: 100% !important;     /* Makes box fill phone width */
+        box-sizing: border-box;     /* Ensures padding doesn't break width */
+      }
+
+      button {
+        font-size: 20px !important;
+        padding: 15px !important;
+        width: 100% !important;
+        background-color: #007bff; /* Optional: makes button stand out */
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+    }
+  </style>
+</head>
 <body>
   <h2>Staff Login</h2>
   <form action="/auth" method="POST">
