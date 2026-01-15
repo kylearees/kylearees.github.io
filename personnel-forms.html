@@ -15,7 +15,7 @@
 
         h3 {
             font-weight: bold;
-            margin-bottom: 5px;
+            margin: 5px 0;
             text-transform: uppercase;
         }
 
@@ -25,6 +25,7 @@
             font-weight: bold;
             display: block;
             margin-bottom: 20px;
+            font-size: 18px;
         }
 
         .warning-text {
@@ -32,21 +33,23 @@
             margin-bottom: 30px;
             padding: 0 10px;
             text-transform: uppercase;
+            color: #333;
         }
 
-        /* This styles all buttons to match your screenshot */
+        /* Buttons styled to match your image exactly */
         .btn {
             display: block;
-            background-color: #004a99; /* Dark blue */
+            background-color: #004a99; /* The dark blue from your screenshot */
             color: white;
             text-decoration: none;
-            padding: 15px;
-            margin: 10px auto;
+            padding: 18px; /* Slightly taller for easier phone tapping */
+            margin: 12px auto;
             border-radius: 8px;
             font-weight: bold;
             font-size: 18px;
-            max-width: 600px; /* Limits width on desktop */
-            width: 90%;       /* Full width on mobile */
+            max-width: 600px;
+            width: 95%;
+            box-sizing: border-box;
         }
 
         .btn:hover {
@@ -55,29 +58,31 @@
 
         .sub-text {
             font-size: 14px;
-            color: #555;
-            margin-top: -5px;
+            color: #666;
+            margin-top: -8px;
             margin-bottom: 15px;
+            font-style: italic;
         }
 
         .back-link {
-            display: block;
-            margin-top: 30px;
-            color: #6a1b9a; /* Purple color from your screenshot */
+            display: inline-block;
+            margin-top: 40px;
+            color: #6a1b9a; /* The purple from your screenshot */
             text-decoration: none;
-            font-size: 16px;
+            font-size: 18px;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
 
-    <h3>For the following forms:</h3>
-    <h3>Scan them (No pictures please) <span style="font-weight: normal;">and send to</span></h3>
+    <h3>FOR THE FOLLOWING FORMS:</h3>
+    <h3>SCAN THEM (NO PICTURES PLEASE) <span style="font-weight: normal;">AND SEND TO</span></h3>
     
     <a href="mailto:ARLENE.HOSKIE@RIOTINTO.COM" class="email-link">ARLENE.HOSKIE@RIOTINTO.COM</a>
 
     <p class="warning-text">
-        Don't forget your social security number where required and don't forget to sign — these are legal documents
+        DON’T FORGET YOUR SOCIAL SECURITY NUMBER WHERE REQUIRED AND DON’T FORGET TO SIGN — THESE ARE LEGAL DOCUMENTS
     </p>
 
     <a href="New Code of Conduct.pdf" target="_blank" class="btn">Updated Code of Conduct</a>
@@ -91,7 +96,7 @@
 
     <a href="Request for a mailed check stub.pdf" target="_blank" class="btn">Request for a mailed check stub</a>
 
-    <a href="#" class="back-link">← Back to Daily Resources</a>
+    <a href="index.html" class="back-link">← Back to Daily Resources</a>
 
 </body>
 </html>
