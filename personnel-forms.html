@@ -1,96 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Personnel Forms</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    padding: 18px;
-    margin: 0;
-    background: #ffffff;
-    color: #111;
-  }
-  .notice {
-    text-align: center;
-    line-height: 1.4;
-    font-size: 16px;
-    max-width: 900px;
-    margin: 0 auto 28px;
-  }
-  .notice strong {
-    font-weight: 800;
-  }
-  .notice a {
-    color: #0b57d0;
-    font-weight: bold;
-  }
-  .buttons {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .button {
-    display: block;
-    width: 100%;
-    background: #004990;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    margin: 14px 0;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  .subnote {
-    text-align: center;
-    font-size: 13px;
-    color: #333;
-    margin-top: -6px;
-    margin-bottom: 14px;
-  }
-  .back {
-    max-width: 900px;
-    margin: 30px auto 0;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        h3 {
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .email-link {
+            color: #0056b3;
+            text-decoration: underline;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .warning-text {
+            font-size: 14px;
+            margin-bottom: 30px;
+            padding: 0 10px;
+            text-transform: uppercase;
+        }
+
+        /* This styles all buttons to match your screenshot */
+        .btn {
+            display: block;
+            background-color: #004a99; /* Dark blue */
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 18px;
+            max-width: 600px; /* Limits width on desktop */
+            width: 90%;       /* Full width on mobile */
+        }
+
+        .btn:hover {
+            background-color: #003366;
+        }
+
+        .sub-text {
+            font-size: 14px;
+            color: #555;
+            margin-top: -5px;
+            margin-bottom: 15px;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 30px;
+            color: #6a1b9a; /* Purple color from your screenshot */
+            text-decoration: none;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
 
-<div class="notice">
-  <strong>FOR THE FOLLOWING FORMS:</strong><br>
-  <strong>SCAN THEM (NO PICTURES PLEASE)</strong> AND SEND TO<br><br>
-  <a href="mailto:ARLENE.HOSKIE@RIOTINTO.COM">ARLENE.HOSKIE@RIOTINTO.COM</a><br><br>
-  DON’T FORGET YOUR SOCIAL SECURITY NUMBER WHERE REQUIRED AND DON’T FORGET TO SIGN — THESE ARE LEGAL DOCUMENTS
-</div>
+    <h3>For the following forms:</h3>
+    <h3>Scan them (No pictures please) <span style="font-weight: normal;">and send to</span></h3>
+    
+    <a href="mailto:ARLENE.HOSKIE@RIOTINTO.COM" class="email-link">ARLENE.HOSKIE@RIOTINTO.COM</a>
 
-<div class="buttons">
-  <a class="button" href="2026%20W4.pdf" target="_blank" rel="noopener">
-    2026 W4
-  </a>
+    <p class="warning-text">
+        Don't forget your social security number where required and don't forget to sign — these are legal documents
+    </p>
 
-  <a href="New Code of Conduct.pdf" target="_blank" class="pdf-button">Updated Code of Conduct</a>
+    <a href="New Code of Conduct.pdf" target="_blank" class="btn">Updated Code of Conduct</a>
 
-  <a href="2026 W4.pdf" target="_blank" class="pdf-button">2026 W4</a>
-  
-  <a class="button" href="Employee%20Address%20Emergency%20Contact%20Details%20Form.pdf" target="_blank" rel="noopener">
-    Employee Address Form
-  </a>
+    <a href="2026 W4.pdf" target="_blank" class="btn">2026 W4</a>
 
-  <a class="button" href="Employee%20Information%20Change%20Form.pdf" target="_blank" rel="noopener">
-    Employee Information Form
-  </a>
-  <div class="subnote">(Usually for direct deposit changes)</div>
+    <a href="Employee Address Form.pdf" target="_blank" class="btn">Employee Address Form</a>
 
-  <a class="button" href="Paper%20Pay%20Statement%20Election%20Form.pdf" target="_blank" rel="noopener">
-    Request for a mailed check stub
-  </a>
-</div>
+    <a href="Employee Information Form.pdf" target="_blank" class="btn">Employee Information Form</a>
+    <p class="sub-text">(Usually for direct deposit changes)</p>
 
-<div class="back">
-  <a href="index.html" style="text-decoration: none;">← Back to Daily Resources</a>
-</div>
+    <a href="Request for a mailed check stub.pdf" target="_blank" class="btn">Request for a mailed check stub</a>
+
+    <a href="#" class="back-link">← Back to Daily Resources</a>
 
 </body>
 </html>
