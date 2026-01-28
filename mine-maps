@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mine Sections</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 16px; background: #f4f6f8; }
+  h1 { text-align: center; color: #333; }
+  
+  /* This ensures the PNG fits the phone screen width */
+  .main-map { 
+    width: 100%; 
+    height: auto; 
+    border: 2px solid #333; 
+    border-radius: 8px; 
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  /* Grid layout for Section 1 - 6 */
+  .grid-container { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 12px; 
+    margin-top: 10px; 
+  }
+
+  /* Large buttons for "Big Hands" / Mobile use */
+  .section-button { 
+    background: #004990; 
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    font-size: 18px;
+  }
+
+  .back-link { display: block; margin-top: 30px; text-decoration: none; color: #004990; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>Mine Overview</h1>
+
+<img src="Mine%20Overview.png" alt="Mine Overview Map" class="main-map">
+
+<div class="grid-container">
+  <a href="Section%201.pdf" target="_blank" class="section-button">Section 1</a>
+  <a href="Section%202.pdf" target="_blank" class="section-button">Section 2</a>
+  <a href="Section%203.pdf" target="_blank" class="section-button">Section 3</a>
+  <a href="Section%204.pdf" target="_blank" class="section-button">Section 4</a>
+  <a href="Section%205.pdf" target="_blank" class="section-button">Section 5</a>
+  <a href="Section%206.pdf" target="_blank" class="section-button">Section 6</a>
+</div>
+
+<p>
+  <a href="haulage.html" class="back-link">← Back to Haulage Info</a><br><br>
+  <a href="index.html" class="back-link">🏠 Back to Home</a>
+</p>
+
+</body>
+</html>
