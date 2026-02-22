@@ -42,7 +42,7 @@ export default {
       }
     }
 
-    // 4. PROTECT ALL OTHER PAGES: If not logged in, redirect to the login page
-    return Response.redirect(`${url.origin}/login.html`, 302);
+   // 4. AUTH TEMPORARILY DISABLED
+return env.ASSETS.fetch(request);
   }
 };
