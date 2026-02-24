@@ -1,33 +1,29 @@
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-
     // 1. PUBLIC PAGES: Allow everyone to see these without logging in
     // This includes the login page itself, your mine maps, and the image assets
     if (
       url.pathname === "/login.html" || 
       url.pathname === "/login" || 
       url.pathname.startsWith("/mine-maps") || 
-      url.pathname.startsWith("/images/")
+      url.pathname.startsWith("/images/") ||
+      url.pathname === "/favicon.ico"
     ) {
       return env.ASSETS.fetch(request);
     }
-
     // 2. AUTHENTICATION CHECK: Check if they have the 'logged_in' cookie
     const cookie = request.headers.get("Cookie") || "";
     if (cookie.includes("logged_in=true")) {
       return env.ASSETS.fetch(request);
     }
-
     // 3. LOGIN SUBMISSION: Handle the POST request from your HTML login form
     if (request.method === "POST" && url.pathname === "/auth") {
       const formData = await request.formData();
       const userFullname = formData.get("username")?.toLowerCase().trim();
       const userPayroll = formData.get("password");
-
       // Look up the name in your STAFF_LIST KV database
       const storedPayroll = await env.STAFF_LIST.get(userFullname);
-
       if (storedPayroll && storedPayroll === userPayroll) {
         // Success! Give them a cookie valid for 24 hours and redirect to homepage
         return new Response("Redirecting...", {
@@ -41,7 +37,6 @@ export default {
         return new Response("Invalid Name or Payroll Number", { status: 401 });
       }
     }
-
    // 4. AUTH TEMPORARILY DISABLED
 return env.ASSETS.fetch(request);
   }
