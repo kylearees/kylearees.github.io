@@ -1,61 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Advancement</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    padding: 18px;
-    margin: 0;
-    background: #ffffff;
-    color: #111;
-  }
-  h1 {
-    margin-top: 0;
-    font-size: 28px;
-    text-align: center;
-  }
-  .buttons {
-    max-width: 900px;
-    margin: 30px auto 0;
-  }
-  .button {
-    display: block;
-    width: 100%;
-    background: #004990;
-    color: white;
-    text-align: center;
-    padding: 18px;
-    margin: 18px 0;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  .back {
-    max-width: 900px;
-    margin: 32px auto 0;
-    text-align: center;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advancement</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0f1117; --surface:#181c27; --card:#1e2333; --border:#2a3050; --accent:#f5a623; --text:#e8ecf4; --muted:#6b7599; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--text); font-family:'Barlow',sans-serif; min-height:100vh; }
+    header { background:var(--surface); border-bottom:3px solid var(--accent); padding:16px 18px 14px; }
+    .badge { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:3px; color:var(--accent); text-transform:uppercase; margin-bottom:3px; }
+    header h1 { font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:800; letter-spacing:1px; text-transform:uppercase; line-height:1; }
+    .wrap { padding:20px 16px; max-width:500px; margin:0 auto; }
+    .section-label { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; color:var(--muted); text-transform:uppercase; margin-bottom:10px; margin-top:24px; }
+    .btn { display:flex; align-items:center; justify-content:center; width:100%; padding:16px; background:var(--card); border:1.5px solid var(--border); border-radius:8px; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:20px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text); transition:all .15s; margin-bottom:10px; }
+    .btn:hover { border-color:var(--accent); color:var(--accent); }
+    .back { display:flex; align-items:center; justify-content:center; margin-top:30px; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
+    .back:hover { color:var(--accent); }
+  </style>
 </head>
 <body>
-<h1>Advancement</h1>
-<div class="buttons">
-  <a class="button" href="http://qrco.de/rtkcopenbids" target="_blank" rel="noopener">
-    Kennecott Open Bids
-  </a>
-  <a class="button" href="Qualification%20Skills%20Matrix%202021revision.pdf" target="_blank" rel="noopener">
-    Skills Matrix
-  </a>
-  <a class="button" href="Qualification%20Training%20and%20Competencies%20Stairstep.pdf" target="_blank" rel="noopener">
-    Qualifications "Stair Step"
-  </a>
+<header>
+  <div class="badge">Kennecott Mine · Employee Resources</div>
+  <h1>Advancement</h1>
+</header>
+<div class="wrap">
+  <div class="section-label">Opportunities</div>
+  <a class="btn" href="http://qrco.de/rtkcopenbids" target="_blank" rel="noopener">Kennecott Open Bids</a>
+  <a class="btn" href="Qualification%20Skills%20Matrix%202021revision.pdf" target="_blank" rel="noopener">Skills Matrix</a>
+  <a class="btn" href="Qualification%20Training%20and%20Competencies%20Stairstep.pdf" target="_blank" rel="noopener">Qualifications "Stair Step"</a>
 </div>
-<div class="back">
-  <a href="index.html" style="text-decoration: none;">🏠 Back to Home</a>
+<div style="text-align:center; margin-top:10px;">
+  <a class="back" href="index.html">🏠 Back to Home</a>
 </div>
 </body>
 </html>

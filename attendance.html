@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Attendance Policy</title>
-<style>
-body { font-family: Arial, sans-serif; padding:16px; background:#f4f6f8; }
-h1 { text-align:center; }
-.button {
-  display:block; background:#004990; color:white;
-  padding:14px; margin:10px 0; border-radius:8px;
-  text-decoration:none; text-align:center;
-  font-size: 20px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0f1117; --surface:#181c27; --card:#1e2333; --border:#2a3050; --accent:#f5a623; --text:#e8ecf4; --muted:#6b7599; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--text); font-family:'Barlow',sans-serif; min-height:100vh; }
+    header { background:var(--surface); border-bottom:3px solid var(--accent); padding:16px 18px 14px; }
+    .badge { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:3px; color:var(--accent); text-transform:uppercase; margin-bottom:3px; }
+    header h1 { font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:800; letter-spacing:1px; text-transform:uppercase; line-height:1; }
+    .wrap { padding:20px 16px; max-width:500px; margin:0 auto; }
+    .section-label { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; color:var(--muted); text-transform:uppercase; margin-bottom:10px; margin-top:24px; }
+    .btn { display:flex; align-items:center; justify-content:center; width:100%; padding:16px; background:var(--card); border:1.5px solid var(--border); border-radius:8px; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:20px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text); transition:all .15s; margin-bottom:10px; }
+    .btn:hover { border-color:var(--accent); color:var(--accent); }
+    .contact-block { background:var(--card); border:1.5px solid var(--border); border-radius:8px; padding:14px 16px; margin-bottom:10px; }
+    .contact-label { font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:2px; color:var(--muted); text-transform:uppercase; margin-bottom:4px; }
+    .contact-block a { font-family:'Barlow Condensed',sans-serif; font-size:22px; font-weight:800; color:var(--accent); text-decoration:none; letter-spacing:1px; }
+    .back { display:flex; align-items:center; justify-content:center; margin-top:30px; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
+    .back:hover { color:var(--accent); }
+  </style>
 </head>
 <body>
-
-<h1>Attendance Policy and Call-off Line</h1>
-
-<p>Review attendance expectations and call-off procedures.</p>
-
-<a class="button" href="Attendance%20Policy.png" target="_blank">
-  Attendance Policy
-</a>
-
-<p><strong>Call-Off Line:</strong><br>
-<a href="tel:18015697000" style="text-decoration:none; font-weight:bold;">📞 801-569-7000</a></p>
-
-<p style="text-align: center;"><a href="index.html" style="text-decoration:none;">🏠 Back to Home</a></p>
-
+<header>
+  <div class="badge">Kennecott Mine · Employee Resources</div>
+  <h1>Attendance Policy</h1>
+</header>
+<div class="wrap">
+  <div class="section-label">Policy Document</div>
+  <a class="btn" href="Attendance%20Policy.png" target="_blank">View Attendance Policy</a>
+  <div class="section-label">Call-Off Line</div>
+  <div class="contact-block">
+    <div class="contact-label">Call-Off Line</div>
+    <a href="tel:18015697000">📞 801-569-7000</a>
+  </div>
+</div>
+<div style="text-align:center;">
+  <a class="back" href="index.html">🏠 Back to Home</a>
+</div>
 </body>
 </html>

@@ -1,33 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Forms</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; background-color: #ffffff; line-height: 1.6; }
-        h3 { font-weight: bold; margin: 5px 0; text-transform: uppercase; }
-        .email-link { color: #0056b3; text-decoration: underline; font-weight: bold; display: block; margin-bottom: 20px; font-size: 18px; }
-        .warning-text { font-size: 14px; margin-bottom: 30px; padding: 0 10px; text-transform: uppercase; color: #333; }
-        .btn { display: block; background-color: #004a99; color: white; text-decoration: none; padding: 18px; margin: 12px auto; border-radius: 8px; font-weight: bold; font-size: 18px; max-width: 600px; width: 95%; box-sizing: border-box; }
-        .btn:hover { background-color: #003366; }
-        .sub-text { font-size: 14px; color: #666; margin-top: -8px; margin-bottom: 15px; font-style: italic; }
-        .back-link { display: inline-block; margin-top: 40px; color: #6a1b9a; text-decoration: none; font-size: 18px; font-weight: 500; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Forms</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0f1117; --surface:#181c27; --card:#1e2333; --border:#2a3050; --accent:#f5a623; --text:#e8ecf4; --muted:#6b7599; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--text); font-family:'Barlow',sans-serif; min-height:100vh; }
+    header { background:var(--surface); border-bottom:3px solid var(--accent); padding:16px 18px 14px; }
+    .badge { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:3px; color:var(--accent); text-transform:uppercase; margin-bottom:3px; }
+    header h1 { font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:800; letter-spacing:1px; text-transform:uppercase; line-height:1; }
+    .wrap { padding:20px 16px; max-width:500px; margin:0 auto; }
+    .section-label { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; color:var(--muted); text-transform:uppercase; margin-bottom:10px; margin-top:24px; }
+    .instructions { background:var(--card); border:1.5px solid var(--border); border-radius:8px; padding:14px 16px; margin-bottom:4px; }
+    .instructions p { font-size:14px; color:var(--muted); line-height:1.5; margin-bottom:8px; }
+    .instructions a { color:var(--accent); font-family:'Barlow Condensed',sans-serif; font-size:16px; font-weight:800; letter-spacing:1px; text-decoration:none; }
+    .warning { font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#e74c3c; border-top:1px solid var(--border); padding-top:10px; margin-top:4px; }
+    .btn { display:flex; align-items:center; justify-content:center; width:100%; padding:16px; background:var(--card); border:1.5px solid var(--border); border-radius:8px; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:20px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text); transition:all .15s; margin-bottom:10px; }
+    .btn:hover { border-color:var(--accent); color:var(--accent); }
+    .subnote { font-size:12px; color:var(--muted); font-style:italic; text-align:center; margin-top:-4px; margin-bottom:10px; }
+    .back { display:flex; align-items:center; justify-content:center; margin-top:30px; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
+    .back:hover { color:var(--accent); }
+  </style>
 </head>
 <body>
-    <h3>FOR THE FOLLOWING EMPLOYEE FORMS:</h3>
-    <h3>SCAN THEM (NO PICTURES PLEASE) <span style="font-weight: normal;">AND SEND TO</span></h3>
-    <a href="mailto:ARLENE.HOSKIE@RIOTINTO.COM" class="email-link">ARLENE.HOSKIE@RIOTINTO.COM</a>
-    <p class="warning-text">
-        DON'T FORGET YOUR SOCIAL SECURITY NUMBER WHERE REQUIRED AND DON'T FORGET TO SIGN — THESE ARE LEGAL DOCUMENTS
-    </p>
-    <a href="New%20Code%20of%20Conduct.pdf" target="_blank" class="btn">Updated Code of Conduct</a>
-    <a href="2026%20W4.pdf" target="_blank" class="btn">2026 W4</a>
-    <a href="Employee%20Address%20Emergency%20Contact%20Details%20Form.pdf" target="_blank" class="btn">Employee Address Form</a>
-    <a href="Employee%20Address%20Emergency%20Contact%20Details%20Form.pdf" target="_blank" class="btn">Employee Information Form</a>
-    <p class="sub-text">(Usually for direct deposit changes)</p>
-    <a href="Paper%20Pay%20Statement%20Election%20Form.pdf" target="_blank" class="btn">Request for a mailed check stub</a>
-    <a href="index.html" class="back-link">🏠 Back to Home</a>
+<header>
+  <div class="badge">Kennecott Mine · Employee Resources</div>
+  <h1>Personnel Forms</h1>
+</header>
+<div class="wrap">
+  <div class="section-label">Instructions</div>
+  <div class="instructions">
+    <p>Scan completed forms (no pictures please) and send to:</p>
+    <a href="mailto:ARLENE.HOSKIE@RIOTINTO.COM">ARLENE.HOSKIE@RIOTINTO.COM</a>
+    <div class="warning">Don't forget your SSN where required and sign — these are legal documents</div>
+  </div>
+  <div class="section-label">Forms</div>
+  <a class="btn" href="New%20Code%20of%20Conduct.pdf" target="_blank">Updated Code of Conduct</a>
+  <a class="btn" href="2026%20W4.pdf" target="_blank">2026 W4</a>
+  <a class="btn" href="Employee%20Address%20Emergency%20Contact%20Details%20Form.pdf" target="_blank">Employee Address Form</a>
+  <a class="btn" href="Employee%20Information%20Change%20Form.pdf" target="_blank">Employee Information Form</a>
+  <p class="subnote">(Usually for direct deposit changes)</p>
+  <a class="btn" href="Paper%20Pay%20Statement%20Election%20Form.pdf" target="_blank">Request for a Mailed Check Stub</a>
+</div>
+<div style="text-align:center;">
+  <a class="back" href="index.html">🏠 Back to Home</a>
+</div>
 </body>
 </html>

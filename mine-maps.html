@@ -1,65 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mine Maps</title>
-<style>
-  body { font-family: Arial, sans-serif; padding: 16px; background: #f4f6f8; }
-  h1 { text-align: center; color: #333; }
-  
-  /* Displays your Mine Overview image clearly at the top */
-  .main-map { 
-    width: 100%; 
-    height: auto; 
-    border: 2px solid #333; 
-    border-radius: 8px; 
-    margin-bottom: 20px;
-    display: block;
-  }
-
-  /* 2-column grid for the Section buttons */
-  .grid-container { 
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 12px; 
-    margin-top: 10px; 
-  }
-
-  /* Large buttons designed for big hands and mobile screens */
-  .section-button { 
-    background: #004990; 
-    color: white; 
-    padding: 20px; 
-    text-align: center; 
-    text-decoration: none; 
-    border-radius: 8px; 
-    font-weight: bold; 
-    font-size: 18px;
-  }
-
-  .back-link { display: block; margin-top: 30px; text-decoration: none; color: #004990; font-weight: bold; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mine Maps</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0f1117; --surface:#181c27; --card:#1e2333; --border:#2a3050; --accent:#f5a623; --text:#e8ecf4; --muted:#6b7599; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--text); font-family:'Barlow',sans-serif; min-height:100vh; }
+    header { background:var(--surface); border-bottom:3px solid var(--accent); padding:16px 18px 14px; }
+    .badge { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:3px; color:var(--accent); text-transform:uppercase; margin-bottom:3px; }
+    header h1 { font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:800; letter-spacing:1px; text-transform:uppercase; line-height:1; }
+    .wrap { padding:20px 16px; max-width:500px; margin:0 auto; }
+    .section-label { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; color:var(--muted); text-transform:uppercase; margin-bottom:10px; margin-top:24px; }
+    .main-map { width:100%; height:auto; border:2px solid var(--border); border-radius:8px; margin-bottom:4px; display:block; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .btn { display:flex; align-items:center; justify-content:center; padding:22px 16px; background:var(--card); border:1.5px solid var(--border); border-radius:8px; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:22px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text); transition:all .15s; }
+    .btn:hover { border-color:var(--accent); color:var(--accent); }
+    .back { display:flex; align-items:center; justify-content:center; margin-top:30px; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); gap:16px; }
+    .back:hover { color:var(--accent); }
+    .back-links { display:flex; flex-direction:column; align-items:center; gap:10px; margin-top:30px; }
+    .back-link { text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
+    .back-link:hover { color:var(--accent); }
+  </style>
 </head>
 <body>
-
-<h1>Mine Overview</h1>
-
-<img src="Mine%20Overview.png" alt="Mine Overview Map" class="main-map">
-
-<div class="grid-container">
-  <a href="Section%201.png" target="_blank" class="section-button">Section 1</a>
-  <a href="Section%202.png" target="_blank" class="section-button">Section 2</a>
-  <a href="Section%203.png" target="_blank" class="section-button">Section 3</a>
-  <a href="Section%204.png" target="_blank" class="section-button">Section 4</a>
-  <a href="Section%205.png" target="_blank" class="section-button">Section 5</a>
-  <a href="Section%206.png" target="_blank" class="section-button">Section 6</a>
+<header>
+  <div class="badge">Kennecott Mine · Employee Resources</div>
+  <h1>Mine Maps</h1>
+</header>
+<div class="wrap">
+  <div class="section-label">Mine Overview</div>
+  <img src="Mine%20Overview.png" alt="Mine Overview Map" class="main-map">
+  <div class="section-label">Section Maps</div>
+  <div class="grid">
+    <a class="btn" href="Section%201.png" target="_blank">Section 1</a>
+    <a class="btn" href="Section%202.png" target="_blank">Section 2</a>
+    <a class="btn" href="Section%203.png" target="_blank">Section 3</a>
+    <a class="btn" href="Section%204.png" target="_blank">Section 4</a>
+    <a class="btn" href="Section%205.png" target="_blank">Section 5</a>
+    <a class="btn" href="Section%206.png" target="_blank">Section 6</a>
+  </div>
 </div>
-
-<p>
-  <a href="haulage.html" class="back-link">← Back to Haulage Info</a><br><br>
-  <a href="index.html" class="back-link">🏠 Back to Home</a>
-</p>
-
+<div class="back-links">
+  <a class="back-link" href="haulage.html">← Back to Haulage Info</a>
+  <a class="back-link" href="index.html">🏠 Back to Home</a>
+</div>
 </body>
 </html>

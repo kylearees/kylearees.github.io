@@ -1,132 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mobile Apps</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    padding: 18px;
-    margin: 0;
-    background: #ffffff;
-    color: #111;
-  }
-  h1 {
-    margin-top: 0;
-    font-size: 28px;
-  }
-  h2 {
-    margin-top: 34px;
-    font-size: 26px;
-  }
-  .app {
-    margin: 18px 0 34px;
-  }
-  .app-title {
-    font-size: 19px;
-    font-weight: bold;
-    margin-bottom: 12px;
-  }
-  .buttons {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-  }
-  .store-button {
-    flex: 1;
-    min-width: 140px;
-    text-align: center;
-    padding: 14px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-  }
-  .apple {
-    background: #000000;
-  }
-  .google {
-    background: #1a73e8;
-  }
-  .credentials {
-    margin-top: 12px;
-    font-size: 15px;
-  }
-  .credentials strong {
-    font-weight: bold;
-  }
-  hr {
-    margin: 36px 0;
-    border: none;
-    border-top: 2px solid #e0e0e0;
-  }
-  .note {
-    margin-top: 18px;
-    font-size: 15px;
-    color: #333;
-  }
-  .back {
-    margin-top: 34px;
-    text-align: center;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Apps</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0f1117; --surface:#181c27; --card:#1e2333; --border:#2a3050; --accent:#f5a623; --text:#e8ecf4; --muted:#6b7599; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--text); font-family:'Barlow',sans-serif; min-height:100vh; }
+    header { background:var(--surface); border-bottom:3px solid var(--accent); padding:16px 18px 14px; }
+    .badge { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:3px; color:var(--accent); text-transform:uppercase; margin-bottom:3px; }
+    header h1 { font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:800; letter-spacing:1px; text-transform:uppercase; line-height:1; }
+    .wrap { padding:20px 16px; max-width:500px; margin:0 auto; }
+    .section-label { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; color:var(--muted); text-transform:uppercase; margin-bottom:10px; margin-top:24px; }
+    .app-card { background:var(--card); border:1.5px solid var(--border); border-radius:8px; padding:16px; margin-bottom:12px; }
+    .app-title { font-family:'Barlow Condensed',sans-serif; font-size:18px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text); margin-bottom:12px; }
+    .store-row { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .store-btn { display:flex; align-items:center; justify-content:center; padding:12px; border-radius:6px; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:16px; font-weight:800; letter-spacing:1px; text-transform:uppercase; transition:opacity .15s; }
+    .apple { background:#000; color:#fff; }
+    .google { background:#1a73e8; color:#fff; }
+    .store-btn:hover { opacity:.8; }
+    .divider { border:none; border-top:1px solid var(--border); margin:24px 0; }
+    .note { background:var(--card); border:1.5px solid var(--border); border-radius:8px; padding:14px 16px; font-size:14px; color:var(--muted); font-style:italic; margin-top:4px; }
+    .back { display:flex; align-items:center; justify-content:center; margin-top:30px; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
+    .back:hover { color:var(--accent); }
+  </style>
 </head>
 <body>
-<h1>Mobile Apps</h1>
-<h2>Scheduling and Training</h2>
-<div class="app">
-  <div class="app-title">Humanity – Scheduling</div>
-  <div class="buttons">
-    <a class="store-button apple" href="https://apps.apple.com/us/app/tcp-humanity/id1199006408" target="_blank" rel="noopener">
-      Apple Store
-    </a>
-    <a class="store-button google" href="https://play.google.com/store/apps/details?id=com.humanity.apps.humanityV3" target="_blank" rel="noopener">
-      Google Play
-    </a>
+<header>
+  <div class="badge">Kennecott Mine · Employee Resources</div>
+  <h1>Mobile Apps</h1>
+</header>
+<div class="wrap">
+  <div class="section-label">Scheduling &amp; Training</div>
+  <div class="app-card">
+    <div class="app-title">Humanity – Scheduling</div>
+    <div class="store-row">
+      <a class="store-btn apple" href="https://apps.apple.com/us/app/tcp-humanity/id1199006408" target="_blank">Apple Store</a>
+      <a class="store-btn google" href="https://play.google.com/store/apps/details?id=com.humanity.apps.humanityV3" target="_blank">Google Play</a>
+    </div>
   </div>
-</div>
-<div class="app">
-  <div class="app-title">RT Copper Training App</div>
-  <div class="buttons">
-    <a class="store-button apple" href="https://apps.apple.com/us/app/rt-copper-training/id6447054837" target="_blank" rel="noopener">
-      Apple Store
-    </a>
-    <a class="store-button google" href="https://play.google.com/store/apps/details?id=com.rtcoppert.app" target="_blank" rel="noopener">
-      Google Play
-    </a>
+  <div class="app-card">
+    <div class="app-title">RT Copper Training App</div>
+    <div class="store-row">
+      <a class="store-btn apple" href="https://apps.apple.com/us/app/rt-copper-training/id6447054837" target="_blank">Apple Store</a>
+      <a class="store-btn google" href="https://play.google.com/store/apps/details?id=com.rtcoppert.app" target="_blank">Google Play</a>
+    </div>
   </div>
-</div>
-<hr>
-<h2>Rio Tinto Rewards</h2>
-<div class="app">
-  <div class="app-title">EquatePlus – MyShare</div>
-  <div class="buttons">
-    <a class="store-button apple" href="https://apps.apple.com/app/id951722877" target="_blank" rel="noopener">
-      Apple Store
-    </a>
-    <a class="store-button google" href="https://play.google.com/store/apps/details?id=com.equatex.mobile" target="_blank" rel="noopener">
-      Google Play
-    </a>
+  <hr class="divider">
+  <div class="section-label">Rio Tinto Rewards</div>
+  <div class="app-card">
+    <div class="app-title">EquatePlus – MyShare</div>
+    <div class="store-row">
+      <a class="store-btn apple" href="https://apps.apple.com/app/id951722877" target="_blank">Apple Store</a>
+      <a class="store-btn google" href="https://play.google.com/store/apps/details?id=com.equatex.mobile" target="_blank">Google Play</a>
+    </div>
   </div>
-</div>
-<div class="app">
-  <div class="app-title">Empower – 401K</div>
-  <div class="buttons">
-    <a class="store-button apple" href="https://apps.apple.com/us/app/empower/id1001257338" target="_blank" rel="noopener">
-      Apple Store
-    </a>
-    <a class="store-button google" href="https://play.google.com/store/apps/details?id=com.participantmobileapp" target="_blank" rel="noopener">
-      Google Play
-    </a>
+  <div class="app-card">
+    <div class="app-title">Empower – 401K</div>
+    <div class="store-row">
+      <a class="store-btn apple" href="https://apps.apple.com/us/app/empower/id1001257338" target="_blank">Apple Store</a>
+      <a class="store-btn google" href="https://play.google.com/store/apps/details?id=com.participantmobileapp" target="_blank">Google Play</a>
+    </div>
   </div>
+  <div class="note">There IS an app for Workday, but it's a pain to set up and not really good for anything anyway — so don't worry about it for now.</div>
 </div>
-<div class="note">
-  There IS an app for Workday, but it's a pain to set up and not really good for anything anyway — so don't worry about it for now.
-</div>
-<div class="back">
-  <a href="index.html">🏠 Back to Home</a>
+<div style="text-align:center;">
+  <a class="back" href="index.html">🏠 Back to Home</a>
 </div>
 </body>
 </html>

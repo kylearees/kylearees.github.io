@@ -1,114 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Benefits</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    padding: 18px;
-    margin: 0;
-    background: #f4f6f8;
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    margin: 6px 0 18px;
-    font-size: 28px;
-  }
-  .card {
-    background: white;
-    border-radius: 12px;
-    padding: 16px;
-    margin: 16px 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-  }
-  .title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 12px;
-  }
-  .button {
-    display: block;
-    background: #004990;
-    color: white;
-    text-align: center;
-    padding: 14px;
-    margin: 10px 0;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .phone {
-    display: block;
-    margin-top: 10px;
-    font-size: 17px;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-  }
-  .subnote {
-    font-size: 14px;
-    color: #333;
-    margin-top: 6px;
-  }
-  .back {
-    margin-top: 24px;
-    text-align: center;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benefits</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0f1117; --surface:#181c27; --card:#1e2333; --border:#2a3050; --accent:#f5a623; --text:#e8ecf4; --muted:#6b7599; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--text); font-family:'Barlow',sans-serif; min-height:100vh; }
+    header { background:var(--surface); border-bottom:3px solid var(--accent); padding:16px 18px 14px; }
+    .badge { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:3px; color:var(--accent); text-transform:uppercase; margin-bottom:3px; }
+    header h1 { font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:800; letter-spacing:1px; text-transform:uppercase; line-height:1; }
+    .wrap { padding:20px 16px; max-width:500px; margin:0 auto; }
+    .section-label { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; color:var(--muted); text-transform:uppercase; margin-bottom:10px; margin-top:24px; }
+    .benefit-card { background:var(--card); border:1.5px solid var(--border); border-radius:8px; padding:16px; margin-bottom:12px; }
+    .benefit-title { font-family:'Barlow Condensed',sans-serif; font-size:18px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text); margin-bottom:10px; }
+    .btn { display:flex; align-items:center; justify-content:center; width:100%; padding:13px; background:var(--surface); border:1.5px solid var(--border); border-radius:6px; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:17px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--text); transition:all .15s; margin-bottom:10px; }
+    .btn:hover { border-color:var(--accent); color:var(--accent); }
+    .phone { display:block; font-family:'Barlow Condensed',sans-serif; font-size:20px; font-weight:800; color:var(--accent); text-decoration:none; margin-top:6px; letter-spacing:1px; }
+    .subnote { font-size:12px; color:var(--muted); margin-top:2px; margin-bottom:8px; font-family:'Barlow Condensed',sans-serif; letter-spacing:1px; text-transform:uppercase; }
+    .back { display:flex; align-items:center; justify-content:center; margin-top:30px; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
+    .back:hover { color:var(--accent); }
+  </style>
 </head>
 <body>
-<h1>Benefits</h1>
-<div class="card">
-  <div class="title">ComPsych – Employee Assistance Program</div>
-  <a class="button" href="https://www.guidanceresources.com/groNg/#/login" target="_blank" rel="noopener">
-    Open ComPsych
-  </a>
-  <a class="phone" href="tel:18889375446">📞 888-937-5446</a>
+<header>
+  <div class="badge">Kennecott Mine · Employee Resources</div>
+  <h1>Benefits</h1>
+</header>
+<div class="wrap">
+  <div class="section-label">Your Benefits</div>
+  <div class="benefit-card">
+    <div class="benefit-title">ComPsych – Employee Assistance</div>
+    <a class="btn" href="https://www.guidanceresources.com/groNg/#/login" target="_blank">Open ComPsych</a>
+    <a class="phone" href="tel:18889375446">📞 888-937-5446</a>
+  </div>
+  <div class="benefit-card">
+    <div class="benefit-title">Rio Tinto Health Benefits</div>
+    <a class="btn" href="https://riotintousbenefits.ehr.com/" target="_blank">Open Benefits Site</a>
+    <a class="phone" href="tel:18017784313">📞 801-778-4313</a>
+  </div>
+  <div class="benefit-card">
+    <div class="benefit-title">HealthEquity</div>
+    <a class="btn" href="https://www.wageworks.com/" target="_blank">Open HealthEquity</a>
+    <a class="phone" href="tel:18663465800">📞 866-346-5800</a>
+    <div class="subnote">HSA</div>
+    <a class="phone" href="tel:18779243967">📞 877-924-3967</a>
+    <div class="subnote">FSA</div>
+  </div>
+  <div class="benefit-card">
+    <div class="benefit-title">MetLife</div>
+    <a class="btn" href="https://www.metlife.com/" target="_blank">Open MetLife</a>
+    <a class="phone" href="tel:18006385433">📞 800-638-5433</a>
+  </div>
+  <div class="benefit-card">
+    <div class="benefit-title">Equate Plus – MyShare</div>
+    <a class="btn" href="https://www.equateplus.com/" target="_blank">Open Equate Plus</a>
+    <a class="phone" href="tel:18558018345">📞 855-801-8345</a>
+  </div>
+  <div class="benefit-card">
+    <div class="benefit-title">Empower Retirement – 401K</div>
+    <a class="btn" href="https://www.empower.com/" target="_blank">Open Empower</a>
+    <a class="phone" href="tel:18557564738">📞 855-756-4738</a>
+  </div>
 </div>
-<div class="card">
-  <div class="title">Rio Tinto Health Benefits</div>
-  <a class="button" href="https://riotintousbenefits.ehr.com/" target="_blank" rel="noopener">
-    Open Benefits Site
-  </a>
-  <a class="phone" href="tel:18017784313">📞 801-778-4313</a>
-</div>
-<div class="card">
-  <div class="title">HealthEquity</div>
-  <a class="button" href="https://www.wageworks.com/" target="_blank" rel="noopener">
-    Open HealthEquity
-  </a>
-  <a class="phone" href="tel:18663465800">📞 866-346-5800</a>
-  <div class="subnote">HSA</div>
-  <a class="phone" href="tel:18779243967">📞 877-924-3967</a>
-  <div class="subnote">FSA</div>
-</div>
-<div class="card">
-  <div class="title">MetLife</div>
-  <a class="button" href="https://www.metlife.com/" target="_blank" rel="noopener">
-    Open MetLife
-  </a>
-  <a class="phone" href="tel:18006385433">📞 800-638-5433</a>
-</div>
-<div class="card">
-  <div class="title">Equate Plus – MyShare</div>
-  <a class="button" href="https://www.equateplus.com/" target="_blank" rel="noopener">
-    Open Equate Plus
-  </a>
-  <a class="phone" href="tel:18558018345">📞 855-801-8345</a>
-</div>
-<div class="card">
-  <div class="title">Empower Retirement – 401K</div>
-  <a class="button" href="https://www.empower.com/" target="_blank" rel="noopener">
-    Open Empower
-  </a>
-  <a class="phone" href="tel:18557564738">📞 855-756-4738</a>
-</div>
-<div class="back">
-  <a href="index.html">🏠 Back to Home</a>
+<div style="text-align:center;">
+  <a class="back" href="index.html">🏠 Back to Home</a>
 </div>
 </body>
 </html>

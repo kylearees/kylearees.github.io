@@ -4,84 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Employee Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    /* 1. Center everything on the screen */
-    body, html {
-      height: 100%;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #f4f7f9; /* Light grey background */
-    }
-
-    /* 2. Create the login "card" */
-    .login-container {
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 350px; /* Limits width on desktop */
-      text-align: center;
-    }
-
-    h2 {
-      margin-bottom: 25px;
-      color: #333;
-    }
-
-    /* 3. Style the inputs */
-    input {
-      width: 100%;
-      padding: 15px;
-      margin-bottom: 20px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 18px; /* Prevents iPhone zoom */
-      box-sizing: border-box; /* Keeps padding inside the width */
-      outline-color: #007bff;
-    }
-
-    /* 4. Style the button */
-    button {
-      width: 100%;
-      padding: 15px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 20px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    /* Adjustments for very small screens */
-    @media (max-width: 400px) {
-      .login-container {
-        padding: 20px;
-        box-shadow: none; /* Flattens look for tiny screens */
-        background: transparent;
-      }
-    }
+    :root { --bg:#0f1117; --surface:#181c27; --card:#1e2333; --border:#2a3050; --accent:#f5a623; --text:#e8ecf4; --muted:#6b7599; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--text); font-family:'Barlow',sans-serif; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:20px; }
+    .logo { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:3px; color:var(--accent); text-transform:uppercase; margin-bottom:6px; text-align:center; }
+    h1 { font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:800; letter-spacing:1px; text-transform:uppercase; margin-bottom:28px; text-align:center; }
+    .card { background:var(--surface); border:1.5px solid var(--border); border-radius:12px; padding:28px 24px; width:100%; max-width:360px; }
+    .field-label { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; color:var(--muted); text-transform:uppercase; margin-bottom:6px; display:block; }
+    input { width:100%; padding:14px; background:var(--card); border:1.5px solid var(--border); border-radius:8px; font-size:16px; color:var(--text); font-family:'Barlow',sans-serif; margin-bottom:16px; outline:none; transition:border-color .15s; }
+    input:focus { border-color:var(--accent); }
+    input::placeholder { color:var(--muted); }
+    button { width:100%; padding:16px; background:var(--accent); color:#000; border:none; border-radius:8px; font-family:'Barlow Condensed',sans-serif; font-size:20px; font-weight:800; letter-spacing:2px; text-transform:uppercase; cursor:pointer; transition:opacity .2s; margin-top:4px; }
+    button:hover { opacity:.9; }
   </style>
 </head>
 <body>
-
-  <div class="login-container">
-    <h2>Employee Login</h2>
+  <div class="logo">Kennecott Mine · Employee Resources</div>
+  <h1>Employee Login</h1>
+  <div class="card">
     <form action="/auth" method="POST">
-      <input type="text" name="username" placeholder="Full Name (lowercase)" required>
-      <input type="password" name="password" placeholder="Payroll Number" required>
+      <label class="field-label">Full Name (lowercase)</label>
+      <input type="text" name="username" placeholder="firstname lastname" required>
+      <label class="field-label">Payroll Number</label>
+      <input type="password" name="password" placeholder="••••••••" required>
       <button type="submit">Login</button>
     </form>
   </div>
-
 </body>
 </html>
