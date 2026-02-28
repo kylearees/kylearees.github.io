@@ -1,56 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kennecott Daily Resources</title>
-<style>
-  body { font-family: Arial, sans-serif; margin: 0; padding: 16px; background: #f4f6f8; }
-  h1 { text-align: center; }
-  .button { display: block; background: #004990; color: white; text-align: center; padding: 14px; margin: 10px 0; border-radius: 8px; text-decoration: none; font-size: 20px; }
-  .section { margin-top: 20px; }
-  .small { font-size: 20px; }
-</style>
+  <title>Kennecott Daily Resources</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1117; --surface: #181c27; --card: #1e2333;
+      --border: #2a3050; --accent: #f5a623; --text: #e8ecf4; --muted: #6b7599;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Barlow', sans-serif; min-height: 100vh; }
+
+    header { background: var(--surface); border-bottom: 3px solid var(--accent); padding: 16px 18px 14px; }
+    .badge { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:3px; color:var(--accent); text-transform:uppercase; margin-bottom:3px; }
+    header h1 { font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:800; letter-spacing:1px; text-transform:uppercase; line-height:1; }
+
+    .wrap { padding: 20px 16px; max-width: 500px; margin: 0 auto; }
+
+    .section-label {
+      font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-bottom: 10px; margin-top: 24px;
+    }
+
+    .btn {
+      display: flex; align-items: center; justify-content: center;
+      width: 100%; padding: 16px; background: var(--card); border: 1.5px solid var(--border);
+      border-radius: 8px; cursor: pointer; text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 800;
+      letter-spacing: 1px; text-transform: uppercase; color: var(--text);
+      transition: all .15s; margin-bottom: 10px;
+    }
+    .btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    .btn-primary {
+      background: var(--accent); color: #000; border-color: var(--accent);
+      font-size: 22px; letter-spacing: 2px;
+    }
+    .btn-primary:hover { opacity: .9; color: #000; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+    .two-col .btn { margin-bottom: 0; }
+
+    .contact-block {
+      background: var(--card); border: 1.5px solid var(--border); border-radius: 8px;
+      padding: 14px 16px; margin-bottom: 10px;
+    }
+    .contact-label {
+      font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700;
+      letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-bottom: 4px;
+    }
+    .contact-block a {
+      font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 800;
+      color: var(--accent); text-decoration: none; letter-spacing: 1px;
+    }
+
+    .note { font-size: 12px; color: var(--muted); font-style: italic; text-align: center; margin-top: 6px; margin-bottom: 4px; }
+
+    footer {
+      text-align: center; font-size: 12px; color: var(--muted);
+      padding: 30px 16px 20px; border-top: 1px solid var(--border); margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Kennecott Mine Daily Resources</h1>
+<header>
+  <div class="badge">Kennecott Mine · Employee Resources</div>
+  <h1>Daily Resources</h1>
+</header>
 
-<a class="button" href="https://pxl.to/wn756byd?m=q" target="_blank">Daily Plan</a>
-<a class="button" href="haulage.html">Haulage Info</a>
-<a class="button" href="https://safeday.app/" target="_blank">SafeDay</a>
+<div class="wrap">
 
-<a class="button" href="2026 Operations Schedule.pdf" target="_blank">2026 Operations Schedule</a>
+  <div class="section-label">Quick Links</div>
+  <a class="btn btn-primary" href="https://pxl.to/wn756byd?m=q" target="_blank">📋 Daily Plan</a>
+  <a class="btn" href="haulage.html">Haulage Info</a>
+  <a class="btn" href="https://safeday.app/" target="_blank">SafeDay</a>
+  <a class="btn" href="2026 Operations Schedule.pdf" target="_blank">2026 Operations Schedule</a>
+  <a class="btn" href="https://qrco.de/rtkcsurfacemine" target="_blank">Surface Mine — RT Connect</a>
+  <p class="note">Some links are only available on the company network</p>
 
-<a class="button" href="https://qrco.de/rtkcsurfacemine" target="_blank">Surface Mine - RT Connect</a>
-<p style="text-align: center; margin-top: -5px; font-size: 14px; color: #666; font-style: italic;">
-  Some links on this page are only available on the company network
-</p>
+  <div class="section-label">Contact</div>
+  <div class="contact-block">
+    <div class="contact-label">Call-Off Line</div>
+    <a href="tel:18015697000">📞 801-569-7000</a>
+  </div>
+  <div class="contact-block">
+    <div class="contact-label">Help Desk — Password Resets</div>
+    <a href="tel:18013634357">📞 801-363-4357</a>
+  </div>
 
-<div class="section">
-  <strong>Call-Off Line</strong><br>
-  <a href="tel:18015697000" style="font-size: 18px; font-weight: bold; text-decoration: none;">📞 801-569-7000</a>
+  <div class="section-label">Resources</div>
+  <div class="two-col">
+    <a class="btn" href="attendance.html">Attendance Policy</a>
+    <a class="btn" href="benefits.html">Benefits</a>
+    <a class="btn" href="advancement.html">Advancement</a>
+    <a class="btn" href="apps.html">Mobile Apps</a>
+    <a class="btn" href="personnel-forms.html">Personnel Forms</a>
+    <a class="btn" href="uniforms.html">Uniforms</a>
+  </div>
+
 </div>
 
-<div class="section">
-  <strong>Help Desk (For resetting your password)</strong><br>
-  <a href="tel:18013634357" style="font-size: 18px; font-weight: bold; text-decoration: none;">📞 801-363-4357</a>
-</div>
-
-<div class="section">
-  <a class="button small" href="attendance.html">Attendance Policy</a>
-  <a class="button small" href="benefits.html">Benefits</a>
-  <a class="button small" href="advancement.html">Advancement</a>
-  <a class="button small" href="apps.html">Mobile Apps</a>
-  <a class="button small" href="personnel-forms.html">Personnel Forms</a>
-  <a class="button small" href="uniforms.html">Uniforms</a>
-</div>
-
-<hr style="margin-top: 40px; border: 0; border-top: 1px solid #ccc;">
-<p style="text-align: center; font-size: 14px; color: #666; padding: 20px;">
+<footer>
   The information on this website is not officially linked to Kennecott or Rio Tinto Global. It's just this guy.
-</p>
+</footer>
 
 </body>
 </html>
