@@ -76,6 +76,7 @@ export default {
           status: 302,
           headers: {
             "Location": "/",
+            
             "Set-Cookie": "logged_in=true; Path=/; HttpOnly; Max-Age=86400; SameSite=Lax"
           }
         });
