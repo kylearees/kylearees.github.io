@@ -77,7 +77,7 @@ export default {
           headers: {
             "Location": "/",
             
-            "Set-Cookie": "logged_in=true; Path=/; HttpOnly; Max-Age=86400; SameSite=Lax"
+           "Set-Cookie": "logged_in=true; Path=/; HttpOnly; Max-Age=2592000; SameSite=Lax"
           }
         });
       } else {
