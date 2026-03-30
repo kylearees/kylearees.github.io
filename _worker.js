@@ -26,7 +26,7 @@ export default {
       const password = formData.get("password")?.trim();
 
       if (!username || !password) {
-        return new Response("Invalid Name or Payroll Number", { status: 401 });
+        return new Response(null, { status: 302, headers: { "Location": "/login.html?error=1" } });
       }
 
       // Look up user in Supabase
@@ -46,7 +46,7 @@ export default {
       const users = await res.json();
 
       if (!users || users.length === 0) {
-        return new Response("Invalid Name or Payroll Number", { status: 401 });
+        return new Response(null, { status: 302, headers: { "Location": "/login.html?error=1" } });
       }
 
       // Verify password using bcrypt
@@ -81,7 +81,7 @@ export default {
           }
         });
       } else {
-        return new Response("Invalid Name or Payroll Number", { status: 401 });
+        return new Response(null, { status: 302, headers: { "Location": "/login.html?error=1" } });
       }
     }
 
