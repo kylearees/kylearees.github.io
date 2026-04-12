@@ -26,42 +26,20 @@ export default {
       if (!username || !password) {
         return new Response(null, { status: 302, headers: { "Location": "/login.html?error=1" } });
       }
-      // Look up user in Supabase
-      const supabaseUrl = env.SUPABASE_URL;
-      const supabaseKey = env.SUPABASE_SERVICE_KEY;
+      // Convert "firstname lastname" → "firstname.lastname@kennecott.internal"
+      const email = username.replace(/\s+/g, '.') + '@kennecott.internal';
       const res = await fetch(
-        `${supabaseUrl}/rest/v1/kw_users?username=eq.${encodeURIComponent(username)}&select=password_hash`,
-        {
-          headers: {
-            "apikey": supabaseKey,
-            "Authorization": `Bearer ${supabaseKey}`
-          }
-        }
-      );
-      const users = await res.json();
-      if (!users || users.length === 0) {
-        return new Response(null, { status: 302, headers: { "Location": "/login.html?error=1" } });
-      }
-      // Verify password using bcrypt
-      // Since we can't run bcrypt in a Worker, we'll verify via a Supabase function
-      // Instead, store a simple hash we can verify here
-      const storedHash = users[0].password_hash;
-      // Use the Web Crypto API to compare
-      // We'll do a direct payroll comparison against the hash via Supabase RPC
-      const rpcRes = await fetch(
-        `${supabaseUrl}/rest/v1/rpc/verify_user`,
+        `${env.SUPABASE_URL}/auth/v1/token?grant_type=password`,
         {
           method: "POST",
           headers: {
-            "apikey": supabaseKey,
-            "Authorization": `Bearer ${supabaseKey}`,
+            "apikey": env.SUPABASE_ANON_KEY,
             "Content-Type": "application/json"
           },
-          body: JSON.stringify({ p_username: username, p_password: password })
+          body: JSON.stringify({ email, password })
         }
       );
-      const valid = await rpcRes.json();
-      if (valid === true) {
+      if (res.ok) {
         return new Response("Redirecting...", {
           status: 302,
           headers: {
