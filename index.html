@@ -14,9 +14,11 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background: var(--bg); color: var(--text); font-family: 'Barlow', sans-serif; min-height: 100vh; }
 
-    header { background: var(--surface); border-bottom: 3px solid var(--accent); padding: 16px 18px 14px; }
+    header { background: var(--surface); border-bottom: 3px solid var(--accent); padding: 16px 18px 14px; display:flex; align-items:center; justify-content:space-between; }
     .badge { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:3px; color:var(--accent); text-transform:uppercase; margin-bottom:3px; }
     header h1 { font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:800; letter-spacing:1px; text-transform:uppercase; line-height:1; }
+    .logout-btn { font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--muted); background:none; border:1.5px solid var(--border); border-radius:6px; padding:8px 14px; cursor:pointer; transition:all .15s; flex-shrink:0; }
+    .logout-btn:hover { color:var(--text); border-color:var(--muted); }
 
     .wrap { padding: 20px 16px; max-width: 500px; margin: 0 auto; }
 
@@ -68,8 +70,11 @@
 <body>
 
 <header>
-  <div class="badge">Kennecott Mine · Employee Resources</div>
-  <h1>Daily Resources</h1>
+  <div>
+    <div class="badge">Kennecott Mine · Employee Resources</div>
+    <h1>Daily Resources</h1>
+  </div>
+  <button class="logout-btn" onclick="logout()">Log Out</button>
 </header>
 
 <div class="wrap">
@@ -108,5 +113,11 @@
   The information on this website is not officially linked to Kennecott or Rio Tinto Global. It's just this guy.
 </footer>
 
+<script>
+  function logout() {
+    document.cookie = 'logged_in=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=Lax';
+    window.location.href = '/login.html';
+  }
+</script>
 </body>
 </html>
