@@ -16,7 +16,7 @@ export default {
     }
 
     // 2. LOGOUT
-    if (url.pathname === "/logout") {
+    if (url.pathname === "/logout" || url.pathname === "/logout/") {
       return new Response(null, {
         status: 302,
         headers: {
