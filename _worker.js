@@ -15,13 +15,24 @@ export default {
       return env.ASSETS.fetch(request);
     }
 
-    // 2. AUTHENTICATION CHECK
+    // 2. LOGOUT
+    if (url.pathname === "/logout") {
+      return new Response(null, {
+        status: 302,
+        headers: {
+          "Location": "/login.html",
+          "Set-Cookie": "logged_in=; Path=/; HttpOnly; Expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=Lax"
+        }
+      });
+    }
+
+    // 3. AUTHENTICATION CHECK
     const cookie = request.headers.get("Cookie") || "";
     if (cookie.includes("logged_in=true")) {
       return env.ASSETS.fetch(request);
     }
 
-    // 3. LOGIN SUBMISSION
+    // 4. LOGIN SUBMISSION
     if (request.method === "POST" && url.pathname === "/auth") {
       const formData = await request.formData();
       const username = (formData.get("username") || "").toLowerCase().trim();
@@ -72,7 +83,7 @@ export default {
       return new Response(null, { status: 302, headers: { "Location": "/login.html?error=1" } });
     }
 
-    // 4. NOT LOGGED IN - redirect to login
+    // 5. NOT LOGGED IN - redirect to login
     return new Response("Redirecting to login...", {
       status: 302,
       headers: { "Location": "/login.html" }
