@@ -7,18 +7,31 @@
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root { --bg:#0f1117; --surface:#181c27; --card:#1e2333; --border:#2a3050; --accent:#f5a623; --text:#e8ecf4; --muted:#6b7599; }
+    :root { --bg:#0f1117; --surface:#181c27; --card:#1e2333; --border:#2a3050; --accent:#f5a623; --text:#e8ecf4; --muted:#6b7599; --danger:#ef4444; }
     * { box-sizing:border-box; margin:0; padding:0; }
     body { background:var(--bg); color:var(--text); font-family:'Barlow',sans-serif; min-height:100vh; }
     header { background:var(--surface); border-bottom:3px solid var(--accent); padding:16px 18px 14px; }
     .badge { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:3px; color:var(--accent); text-transform:uppercase; margin-bottom:3px; }
     header h1 { font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:800; letter-spacing:1px; text-transform:uppercase; line-height:1; }
-    .wrap { padding:20px 16px; max-width:500px; margin:0 auto; }
-    .section-label { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; color:var(--muted); text-transform:uppercase; margin-bottom:10px; margin-top:24px; }
-    .info-card { background:var(--card); border:1.5px solid var(--border); border-radius:8px; padding:16px; margin-bottom:12px; font-size:16px; line-height:1.6; color:var(--text); }
-    .info-card a { color:var(--accent); font-family:'Barlow Condensed',sans-serif; font-size:18px; font-weight:800; letter-spacing:1px; text-decoration:none; display:block; margin-top:10px; }
-    .warning-card { background:var(--card); border:1.5px solid #c0392b; border-radius:8px; padding:14px 16px; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#e74c3c; line-height:1.5; }
-    .back { display:flex; align-items:center; justify-content:center; margin-top:30px; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
+    .wrap { padding:20px 16px; max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:16px; }
+    .section-label { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; color:var(--muted); text-transform:uppercase; margin-bottom:10px; }
+    .card { background:var(--card); border:1.5px solid var(--border); border-radius:10px; padding:18px 20px; }
+    .card h2 { font-family:'Barlow Condensed',sans-serif; font-size:18px; font-weight:700; letter-spacing:1px; margin-bottom:12px; }
+    .email-link { display:block; text-align:center; font-family:'Barlow Condensed',sans-serif; font-size:20px; font-weight:700; color:var(--accent); text-decoration:none; margin-bottom:14px; word-break:break-all; }
+    .email-link:hover { opacity:0.8; }
+    .bullet-list { list-style:none; display:flex; flex-direction:column; gap:5px; }
+    .bullet-list li { font-size:14px; padding-left:14px; position:relative; }
+    .bullet-list li::before { content:'–'; position:absolute; left:0; color:var(--muted); }
+    .gtk-list { display:flex; flex-direction:column; gap:14px; }
+    .gtk-label { font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:800; color:var(--danger); text-transform:uppercase; letter-spacing:0.5px; font-style:italic; }
+    .gtk-body { font-size:14px; line-height:1.5; }
+    .sub-label { font-size:13px; color:var(--muted); margin:6px 0 4px; }
+    .sub-list { list-style:none; display:flex; flex-direction:column; gap:4px; }
+    .sub-list li { font-size:14px; padding-left:16px; position:relative; }
+    .sub-list li::before { content:'–'; position:absolute; left:4px; color:var(--muted); }
+    .sub-list.indented li { padding-left:28px; }
+    .sub-list.indented li::before { left:16px; }
+    .back { display:flex; align-items:center; justify-content:center; margin-top:10px; margin-bottom:30px; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
     .back:hover { color:var(--accent); }
   </style>
 </head>
@@ -27,18 +40,75 @@
   <div class="badge">Kennecott Mine · Employee Resources</div>
   <h1>Uniforms</h1>
 </header>
+
 <div class="wrap">
-  <div class="section-label">Uniform Exchanges</div>
-  <div class="info-card">
-    For uniform changes please email:
-    <a href="mailto:RTKUniforms@riotinto.com">RTKUniforms@riotinto.com</a>
+
+  <!-- Contact -->
+  <div class="card">
+    <div class="section-label">Uniform Help</div>
+    <h2>For assistance, Email:</h2>
+    <a class="email-link" href="mailto:RTKUniforms@riotinto.com">RTKUniforms@riotinto.com</a>
+    <ul class="bullet-list">
+      <li>Change your size</li>
+      <li>Change your allotment</li>
+      <li>Change your style (FR, non-FR)</li>
+      <li>Check order status</li>
+      <li>Request repairs / replacements</li>
+    </ul>
   </div>
-  <div class="warning-card">
-    Do NOT leave uniforms to be exchanged without FIRST getting a confirmation email that they have been ordered
+
+  <!-- Good-to-knows -->
+  <div class="card">
+    <div class="section-label">Guidelines</div>
+    <h2><em>General Uniform Good-To Knows:</em></h2>
+    <div class="gtk-list">
+
+      <div>
+        <span class="gtk-label">Never dispose of your uniforms. </span>
+        <span class="gtk-body">Uniforms are rented and recyclable. Return them, don't trash them.</span>
+      </div>
+
+      <div>
+        <span class="gtk-label">Do not take co-worker's uniforms. </span>
+        <span class="gtk-body">If it doesn't say your name, it's not your uniform. Notify your supervisor if you don't have any uniforms.</span>
+      </div>
+
+      <div>
+        <span class="gtk-label">Keep track of your uniforms. </span>
+        <span class="gtk-body">Best practice is to launder with Cintas. Report immediately when uniforms are lost, stolen, or just haven't come back to you in a while!</span>
+      </div>
+
+      <div>
+        <span class="gtk-label">Help Cintas. </span>
+        <span class="gtk-body"><em>Our</em> contractors do not field requests on site in order to get through all their deliveries. Please use our RTK email above!</span>
+      </div>
+
+      <div>
+        <span class="gtk-label">Sometimes it takes longer than expected. </span>
+        <span class="gtk-body">Depending on stockroom availability and special size orders (tall sizes, short sizes, etc.), this can take weeks or even months. We're happy to check the status of your order with Cintas for you.</span>
+      </div>
+
+      <div>
+        <span class="gtk-label">Be specific. </span>
+        <span class="gtk-body">The more detail you provide, the quicker we can help you.</span>
+        <p class="sub-label">Include:</p>
+        <ul class="sub-list">
+          <li>Your name as listed on your uniform barcode</li>
+          <li>Where your uniforms get delivered</li>
+          <li>What you want done, and relevant information</li>
+        </ul>
+        <p class="sub-label">Examples:</p>
+        <ul class="sub-list indented">
+          <li>Size change detail (Large to XL)</li>
+          <li>Style change detail (FR? Non-FR? Specific type of pants?)</li>
+        </ul>
+      </div>
+
+    </div>
   </div>
+
 </div>
-<div style="text-align:center;">
-  <a class="back" href="index.html">🏠 Back to Home</a>
-</div>
+
+<a class="back" href="index.html">🏠 Back to Home</a>
 </body>
 </html>
