@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News — Kennecott Daily Resources</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0f1117; --surface:#181c27; --card:#1e2333; --border:#2a3050; --accent:#f5a623; --text:#e8ecf4; --muted:#6b7599; --news:#b91c1c; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--text); font-family:'Barlow',sans-serif; min-height:100vh; }
+    header { background:var(--surface); border-bottom:3px solid var(--news); padding:16px 18px 14px; display:flex; align-items:center; justify-content:space-between; }
+    .badge { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:3px; color:var(--news); text-transform:uppercase; margin-bottom:3px; }
+    header h1 { font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:800; letter-spacing:1px; text-transform:uppercase; line-height:1; }
+    .home-btn { font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--muted); text-decoration:none; border:1.5px solid var(--border); padding:8px 14px; border-radius:6px; transition:all .15s; flex-shrink:0; }
+    .home-btn:hover { color:var(--text); border-color:var(--muted); }
+    .wrap { padding:20px 16px; max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:16px; }
+    .news-card { background:var(--card); border:1.5px solid var(--border); border-radius:10px; overflow:hidden; }
+    .news-card-header { background:#1a1010; border-bottom:1.5px solid var(--news); padding:14px 18px; display:flex; align-items:center; gap:10px; }
+    .news-tag { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; background:var(--news); color:#fff; border-radius:4px; padding:2px 8px; }
+    .news-title { font-family:'Barlow Condensed',sans-serif; font-size:20px; font-weight:800; letter-spacing:0.5px; color:var(--text); }
+    .news-body { padding:16px 18px; font-size:14px; line-height:1.7; color:var(--text); display:flex; flex-direction:column; gap:10px; }
+    .news-body p { }
+    .news-body a { color:var(--accent); font-weight:600; }
+    .news-body ul { padding-left:18px; display:flex; flex-direction:column; gap:4px; }
+    .back { display:flex; align-items:center; justify-content:center; margin-bottom:30px; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
+    .back:hover { color:var(--accent); }
+  </style>
+</head>
+<body>
+<header>
+  <div>
+    <div class="badge">Kennecott Mine · Employee Resources</div>
+    <h1>News</h1>
+  </div>
+  <a class="home-btn" href="index.html">🏠 Home</a>
+</header>
+
+<div class="wrap">
+
+  <div class="news-card">
+    <div class="news-card-header">
+      <span class="news-tag">Scholarship</span>
+      <span class="news-title">Scholarship Program</span>
+    </div>
+    <div class="news-body">
+      <p>Details coming soon.</p>
+    </div>
+  </div>
+
+</div>
+
+<a class="back" href="index.html">🏠 Back to Home</a>
+</body>
+</html>
