@@ -7,23 +7,82 @@
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root { --bg:#0f1117; --surface:#181c27; --card:#1e2333; --border:#2a3050; --accent:#f5a623; --text:#e8ecf4; --muted:#6b7599; --news:#b91c1c; }
+    :root { --bg:#0f1117; --surface:#181c27; --card:#1e2333; --border:#2a3050; --accent:#f5a623; --text:#e8ecf4; --muted:#6b7599; --news:#b91c1c; --green:#16a34a; }
     * { box-sizing:border-box; margin:0; padding:0; }
     body { background:var(--bg); color:var(--text); font-family:'Barlow',sans-serif; min-height:100vh; }
+
     header { background:var(--surface); border-bottom:3px solid var(--news); padding:16px 18px 14px; display:flex; align-items:center; justify-content:space-between; }
     .badge { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:3px; color:var(--news); text-transform:uppercase; margin-bottom:3px; }
     header h1 { font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:800; letter-spacing:1px; text-transform:uppercase; line-height:1; }
     .home-btn { font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--muted); text-decoration:none; border:1.5px solid var(--border); padding:8px 14px; border-radius:6px; transition:all .15s; flex-shrink:0; }
     .home-btn:hover { color:var(--text); border-color:var(--muted); }
-    .wrap { padding:20px 16px; max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:16px; }
+
+    .wrap { padding:20px 16px; max-width:640px; margin:0 auto; display:flex; flex-direction:column; gap:16px; }
+
+    /* Card shell */
     .news-card { background:var(--card); border:1.5px solid var(--border); border-radius:10px; overflow:hidden; }
     .news-card-header { background:#1a1010; border-bottom:1.5px solid var(--news); padding:14px 18px; display:flex; align-items:center; gap:10px; }
-    .news-tag { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; background:var(--news); color:#fff; border-radius:4px; padding:2px 8px; }
+    .news-tag { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; background:var(--news); color:#fff; border-radius:4px; padding:2px 8px; flex-shrink:0; }
     .news-title { font-family:'Barlow Condensed',sans-serif; font-size:20px; font-weight:800; letter-spacing:0.5px; color:var(--text); }
-    .news-body { padding:16px 18px; font-size:14px; line-height:1.7; color:var(--text); display:flex; flex-direction:column; gap:10px; }
-    .news-body p { }
-    .news-body a { color:var(--accent); font-weight:600; }
-    .news-body ul { padding-left:18px; display:flex; flex-direction:column; gap:4px; }
+
+    /* Deadline banner */
+    .deadline-banner { background:#1f0a0a; border-bottom:1px solid #7f1d1d; padding:14px 18px; text-align:center; }
+    .deadline-label { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#f87171; margin-bottom:2px; }
+    .deadline-date { font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:800; color:#fff; letter-spacing:1px; }
+
+    /* Apply button */
+    .apply-btn { display:block; margin:16px 18px 0; padding:14px; background:var(--green); color:#fff; text-align:center; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:18px; font-weight:800; letter-spacing:1px; text-transform:uppercase; border-radius:8px; transition:opacity .15s; }
+    .apply-btn:hover { opacity:.85; }
+
+    /* Body sections */
+    .section { padding:16px 18px; border-top:1px solid var(--border); }
+    .section-title { font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+    .intro-text { font-size:14px; line-height:1.6; color:var(--text); padding:16px 18px; }
+
+    /* Key facts row */
+    .facts-row { display:grid; grid-template-columns:1fr 1fr; gap:10px; padding:16px 18px; border-top:1px solid var(--border); }
+    .fact { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:12px 14px; }
+    .fact-label { font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+    .fact-value { font-family:'Barlow Condensed',sans-serif; font-size:17px; font-weight:800; color:var(--accent); line-height:1.2; }
+
+    /* Lists */
+    .check-list { list-style:none; display:flex; flex-direction:column; gap:6px; }
+    .check-list li { font-size:14px; line-height:1.5; padding-left:20px; position:relative; color:var(--text); }
+    .check-list li::before { content:'✓'; position:absolute; left:0; color:var(--green); font-weight:700; }
+    .x-list { list-style:none; display:flex; flex-direction:column; gap:6px; }
+    .x-list li { font-size:14px; line-height:1.5; padding-left:20px; position:relative; color:var(--text); }
+    .x-list li::before { content:'✗'; position:absolute; left:0; color:#f87171; font-weight:700; }
+    .doc-list { list-style:none; display:flex; flex-direction:column; gap:6px; }
+    .doc-list li { font-size:14px; line-height:1.5; padding-left:20px; position:relative; color:var(--text); }
+    .doc-list li::before { content:'📎'; position:absolute; left:0; font-size:12px; top:1px; }
+
+    /* Timeline */
+    .timeline { display:flex; flex-direction:column; gap:10px; }
+    .tl-item { display:flex; gap:12px; align-items:flex-start; }
+    .tl-dot { width:10px; height:10px; border-radius:50%; background:var(--accent); margin-top:4px; flex-shrink:0; }
+    .tl-dot.red { background:#f87171; }
+    .tl-content { flex:1; }
+    .tl-date { font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:0.5px; color:var(--accent); }
+    .tl-dot.red + .tl-content .tl-date { color:#f87171; }
+    .tl-desc { font-size:13px; color:var(--muted); margin-top:1px; }
+
+    /* Payment note */
+    .payment-note { background:#0f1a0f; border:1px solid #1a3a1a; border-radius:8px; padding:12px 14px; font-size:13px; color:#86efac; line-height:1.5; }
+
+    /* FAQ accordion */
+    .faq-list { display:flex; flex-direction:column; gap:6px; }
+    .faq-item { border:1px solid var(--border); border-radius:8px; overflow:hidden; }
+    .faq-q { display:flex; justify-content:space-between; align-items:center; padding:11px 14px; cursor:pointer; font-size:13px; font-weight:600; color:var(--text); line-height:1.4; gap:10px; user-select:none; }
+    .faq-q:hover { background:#252b3d; }
+    .faq-chevron { color:var(--muted); font-size:14px; flex-shrink:0; transition:transform .2s; }
+    .faq-item.open .faq-chevron { transform:rotate(180deg); }
+    .faq-a { display:none; padding:10px 14px 12px; font-size:13px; color:var(--muted); line-height:1.6; border-top:1px solid var(--border); }
+    .faq-item.open .faq-a { display:block; }
+
+    /* Contact */
+    .contact-link { display:block; font-family:'Barlow Condensed',sans-serif; font-size:17px; font-weight:700; color:var(--accent); text-decoration:none; margin-top:4px; word-break:break-all; }
+    .contact-link:hover { opacity:.8; }
+
     .back { display:flex; align-items:center; justify-content:center; margin-bottom:30px; text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
     .back:hover { color:var(--accent); }
   </style>
@@ -39,18 +98,175 @@
 
 <div class="wrap">
 
+  <!-- Scholarship Card -->
   <div class="news-card">
     <div class="news-card-header">
       <span class="news-tag">Scholarship</span>
-      <span class="news-title">Scholarship Program</span>
+      <span class="news-title">Rio Tinto USA Family Scholarship Program</span>
     </div>
-    <div class="news-body">
-      <p>Details coming soon.</p>
+
+    <!-- Deadline banner -->
+    <div class="deadline-banner">
+      <div class="deadline-label">Application Deadline — No Exceptions</div>
+      <div class="deadline-date">May 31, 2026</div>
     </div>
-  </div>
+
+    <!-- Apply button -->
+    <a class="apply-btn" href="https://forms.office.com/r/a2uNwaNYu9?origin=lprLink" target="_blank" rel="noopener">Apply Online Now →</a>
+
+    <!-- Intro -->
+    <p class="intro-text">Rio Tinto's Family Scholarship Program (FSP) provides <strong>$3,000 scholarships</strong> to child dependents of active U.S.-based Rio Tinto employees to help fund post-high school education. Full-time and part-time employees are eligible. Contractors, fixed-term, casual, and temporary employees are not eligible.</p>
+
+    <!-- Key facts -->
+    <div class="facts-row">
+      <div class="fact">
+        <div class="fact-label">Award Amount</div>
+        <div class="fact-value">$3,000</div>
+      </div>
+      <div class="fact">
+        <div class="fact-label">Min. GPA Required</div>
+        <div class="fact-value">3.0 Cumulative</div>
+      </div>
+      <div class="fact">
+        <div class="fact-label">Renewable?</div>
+        <div class="fact-value">Yes — reapply yearly</div>
+      </div>
+      <div class="fact">
+        <div class="fact-label">Paid To</div>
+        <div class="fact-value">Employee (taxable)</div>
+      </div>
+    </div>
+
+    <!-- Key Dates -->
+    <div class="section">
+      <div class="section-title">Key Dates</div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot red"></div>
+          <div class="tl-content">
+            <div class="tl-date">May 31, 2026</div>
+            <div class="tl-desc">Application deadline — no exceptions</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">July 1–9, 2026</div>
+            <div class="tl-desc">Applicants notified of results</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">End of July 2026</div>
+            <div class="tl-desc">Awards distributed via payroll</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Eligibility -->
+    <div class="section">
+      <div class="section-title">Who is Eligible</div>
+      <ul class="check-list">
+        <li>Child dependent of an active, eligible U.S.-based Rio Tinto employee (full-time or part-time)</li>
+        <li>Tax dependent for the prior federal tax year</li>
+        <li>Accepted at or attending an accredited post-secondary institution (university, college, trade school, etc.) in 2026</li>
+        <li>Minimum 3.0 cumulative GPA</li>
+        <li>Previous recipients may reapply — prior awards don't affect selection</li>
+      </ul>
+      <div style="margin-top:10px;">
+        <ul class="x-list">
+          <li>Contractors, fixed-term, casual, and temporary employees are not eligible</li>
+          <li>Employees themselves do not qualify — this is for child dependents only</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Required Documents -->
+    <div class="section">
+      <div class="section-title">Required Documents</div>
+      <ul class="doc-list">
+        <li>School transcripts (most recent; if unavailable before deadline, a screenshot from your school portal is accepted)</li>
+        <li>Personal essay</li>
+        <li>Letter of Recommendation — must be signed and include recommender contact info</li>
+        <li>Proof of enrollment — acceptance letter or copy of registered fall/summer courses</li>
+      </ul>
+    </div>
+
+    <!-- Payment -->
+    <div class="section">
+      <div class="section-title">Payment Details</div>
+      <div class="payment-note">
+        The $3,000 award is paid to the <strong>employee</strong> (not the child) through a regular payroll cycle. It is subject to Social Security, Medicare, and federal tax withholding and treated as ordinary income. The employee is responsible for passing the award to the child dependent — failure to do so may result in disqualification from the program.
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <div class="section-title">Frequently Asked Questions</div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Can a student apply more than once?<span class="faq-chevron">▾</span></div>
+          <div class="faq-a">Yes. Scholarships can be awarded year after year as long as eligibility requirements are met. Previous winners must reapply and go through the full selection process — last year's results have no bearing on this year's.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What schools qualify?<span class="faq-chevron">▾</span></div>
+          <div class="faq-a">Any accredited post-secondary institution — universities, colleges, trade/technical schools. Graduate programs (masters, PhDs, certifications) are also eligible as this program covers all post-high school education.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What semester do I need to be enrolled in?<span class="faq-chevron">▾</span></div>
+          <div class="faq-a">Either the coming summer or fall semester of 2026.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What if my grades aren't posted before the deadline?<span class="faq-chevron">▾</span></div>
+          <div class="faq-a">A screenshot of your current grades from your school's website is accepted if official transcripts aren't available in time. Alternatively, your school can email the transcript directly to usafamilyscholarship@riotinto.com before the deadline.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What if I took a gap year?<span class="faq-chevron">▾</span></div>
+          <div class="faq-a">Gap years for personal or religious reasons are welcome. Your cumulative GPA up to the point of the gap year will be considered.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Letter of Recommendation — what do I need to know?<span class="faq-chevron">▾</span></div>
+          <div class="faq-a">The LOR must be signed and include the recommender's contact information. It doesn't have to be written specifically for this program, but a generic letter significantly reduces your chances. You can upload it yourself or have your recommender email it directly to usafamilyscholarship@riotinto.com before the deadline.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">How are winners selected?<span class="faq-chevron">▾</span></div>
+          <div class="faq-a">A committee of Rio Tinto employees from various business units reviews and scores all qualifying applications. Identifying information is removed prior to review. Each business unit has a pledged number of scholarships — students with the highest scores in each unit are selected. All decisions are final.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Do you accept mailed applications?<span class="faq-chevron">▾</span></div>
+          <div class="faq-a">No. All applications must be submitted online at the link above.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="section">
+      <div class="section-title">Questions?</div>
+      <p style="font-size:13px; color:var(--muted);">Contact the scholarship team directly:</p>
+      <a class="contact-link" href="mailto:usafamilyscholarship@riotinto.com">usafamilyscholarship@riotinto.com</a>
+    </div>
+
+  </div><!-- end news-card -->
 
 </div>
 
 <a class="back" href="index.html">🏠 Back to Home</a>
+
+<script>
+  function toggleFaq(el) {
+    el.parentElement.classList.toggle('open');
+  }
+</script>
 </body>
 </html>
